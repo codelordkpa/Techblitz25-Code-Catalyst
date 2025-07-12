@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Competition</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; background: #f4f4f4; }
+        h1, h2 { text-align: center; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .section { margin-bottom: 20px; }
+        img { width: 100%; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Data Science Competition</h1>
+        
+        <div class="section">
+            <h2>📌 Problem Statement</h2>
+            <p>Describe the problem statement given in the competition.</p>
+        </div>
+        
+        <div class="section">
+            <h2>🧹 Data Cleaning (Before vs. After)</h2>
+            <p>Show how data looked before and after cleaning.</p>
+            <img src="before_cleaning.png" alt="Before Cleaning">
+            <img src="after_cleaning.png" alt="After Cleaning">
+        </div>
+        
+        <div class="section">
+            <h2>📊 Data Visualizations</h2>
+            <p>Graphs generated from data analysis.</p>
+            <div id="plot1"></div>
+            <div id="plot2"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 Key Insights</h2>
+            <p>Summarize findings from the data.</p>
+        </div>
+        
+        <div class="section">
+            <h2>🚀 Challenges & Conclusion</h2>
+            <p>Explain what was difficult and what was learned.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Example Plotly chart 1
+        var trace1 = {
+            x: ["Category A", "Category B", "Category C"],
+            y: [20, 14, 23],
+            type: "bar"
+        };
+        var data1 = [trace1];
+        Plotly.newPlot("plot1", data1);
+
+        // Example Plotly chart 2
+        var trace2 = {
+            values: [10, 20, 30],
+            labels: ["Group 1", "Group 2", "Group 3"],
+            type: "pie"
+        };
+        var data2 = [trace2];
+        Plotly.newPlot("plot2", data2);
+    </script>
+</body>
+</html>
